@@ -5,13 +5,13 @@ from agent.ai_agent import AIAgent
 
 def main():
     st.set_page_config(
-        page_title="AI Information Extractor",
+        page_title="Extractor AI agent",
         page_icon="🔍",
         layout="wide"
     )
     
     # Add a sidebar for navigation
-    st.sidebar.title("🔍 AI Information Extractor")
+    st.sidebar.title("🔍 Extractor AI agent")
     st.sidebar.markdown("""
     This tool helps you extract specific information about companies or other entities from the web using AI.
     Navigate through the steps using the options below.
