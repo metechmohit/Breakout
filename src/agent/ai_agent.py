@@ -6,10 +6,6 @@ from llm.processor import LLMProcessor
 from data_handler.sheets_handler import GoogleSheetsHandler
 
 
-# Access variables
-SERPAPI_KEY = os.getenv("SERPAPI_KEY")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
 
 class AIAgent:
     """Main AI Agent class that coordinates search and LLM processing"""

@@ -9,10 +9,13 @@ def main():
         page_icon="🔍",
         layout="wide"
     )
+    
     st.title("🔍 Extractor AI agent")
     
     # Step 1: Initialize AI Agent
-    agent = AIAgent()
+    SERPAPI_KEY = os.getenv("SERPAPI_KEY")
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
 
     # Step 2: Data Source Selection
     st.title("Step 1: Select Data Source")
