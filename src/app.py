@@ -13,8 +13,8 @@ def main():
     st.title("🔍 Extractor AI agent")
     
     # Step 1: Initialize AI Agent
-    SERPAPI_KEY = os.getenv("SERPAPI_KEY")
-    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+    SERPAPI_KEY =  st.secrets("SERPAPI_KEY")
+    GROQ_API_KEY = st.secrets("GROQ_API_KEY")
 
 
     # Step 2: Data Source Selection
