@@ -9,14 +9,8 @@ def main():
         page_icon="🔍",
         layout="wide"
     )
+    st.title("🔍 Extractor AI agent")
     
-    # Add a sidebar for navigation
-    st.sidebar.title("🔍 Extractor AI agent")
-    st.sidebar.markdown("""
-    This tool helps you extract specific information about companies or other entities from the web using AI.
-    Navigate through the steps using the options below.
-    """)
-
     # Step 1: Initialize AI Agent
     agent = AIAgent()
 
