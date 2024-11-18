@@ -2,43 +2,23 @@ import streamlit as st
 import pandas as pd
 import traceback
 from agent.ai_agent import AIAgent
-from config import (
-    SERPAPI_KEY,
-    GROQ_API_KEY,
-    GOOGLE_SCOPES,
-    GOOGLE_SHEETS_CREDENTIALS,
-    LLM_MODEL,
-    LLM_TEMPERATURE,
-    LLM_MAX_TOKENS,
-    SEARCH_RESULTS_PER_QUERY,
-    SEARCH_REGION,
-    RATE_LIMIT_DELAY,
-    MAX_RETRIES,
-)
 
 def main():
     st.set_page_config(
-        page_title="Extractor AI Agent",
+        page_title="AI Information Extractor",
         page_icon="🔍",
         layout="wide"
     )
     
-    st.title("🔍 Extractor AI Agent")
-    
-    # Step 1: Initialize AI Agent
-    if not SERPAPI_KEY or not GROQ_API_KEY:
-        st.error("Missing required API keys. Ensure `SERPAPI_KEY` and `GROQ_API_KEY` are set in the environment.")
-        return
+    # Add a sidebar for navigation
+    st.sidebar.title("🔍 AI Information Extractor")
+    st.sidebar.markdown("""
+    This tool helps you extract specific information about companies or other entities from the web using AI.
+    Navigate through the steps using the options below.
+    """)
 
-    agent = AIAgent(
-        serpapi_key=SERPAPI_KEY,
-        groq_api_key=GROQ_API_KEY,
-        llm_model=LLM_MODEL,
-        llm_temperature=LLM_TEMPERATURE,
-        llm_max_tokens=LLM_MAX_TOKENS,
-        rate_limit_delay=RATE_LIMIT_DELAY,
-        max_retries=MAX_RETRIES
-    )
+    # Step 1: Initialize AI Agent
+    agent = AIAgent()
 
     # Step 2: Data Source Selection
     st.title("Step 1: Select Data Source")
